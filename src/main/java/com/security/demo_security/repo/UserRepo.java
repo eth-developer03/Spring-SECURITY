@@ -1,7 +1,11 @@
 package com.security.demo_security.repo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface UserRepo extends JpaRepository{
+import com.security.demo_security.models.Users;
+@Repository
+public interface UserRepo extends JpaRepository<Users,Integer>{
     
+Users findByUsername(String username);
 }
