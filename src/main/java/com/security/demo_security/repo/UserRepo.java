@@ -7,5 +7,6 @@ import com.security.demo_security.models.Users;
 @Repository
 public interface UserRepo extends JpaRepository<Users,Integer>{
     
-Users findByUsername(String username);
+Users findByUsername(String username); // automatic fetch by sql as findBy prefix it searches as SELECT * FROM users WHERE username = ?;
+
 }
